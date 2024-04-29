@@ -20,7 +20,8 @@ int main()
  } ;
 */ 
  #include <stdio.h>
-
+/* Character Counting */
+/*
 int main() {
 	long nc;
 	
@@ -30,4 +31,16 @@ int main() {
 	printf("%ld\n", nc);
 	
 	return 0;
+}
+*/	
+/*Line counting*/
+int main() {
+	int c, nl;
+	
+	nl = 0;
+	while ((c= getchar()) != EOF)
+		if (c == '\n');
+			++nl;
+	printf("%ld\n", nl);
 }	
+
