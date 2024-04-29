@@ -1,10 +1,33 @@
-#include <stdio.h>
-#define LOWER 0
-#define UPPER 300
-#define STEP 20
-int main() 
- { 
-	 int fahr; 
-	for (fahr = LOWER; fahr <= UPPER; fahr = fahr + STEP) 
-	 printf("%3d %6.1f\n", fahr, (5.0/9.0)*(fahr-32)); 
- } 
+ #include <stdio.h>
+ /* copy input to output, use ctrl + z + enter on windows to confirm input */
+ 
+/* 
+Exercsise 1-6. Verify that the expression getchar() != EOF is 0 or 1.
+Exercise 1-7. Write a program to print the value of EOF. 
+*/
+/*  
+int main()
+ {
+	int c;
+	c = getchar();
+	while (c != EOF) {
+		printf(" %d\n", c != EOF);
+		putchar(c);
+		c = getchar();
+	}
+	printf("%d\n", c != EOF);
+	return 0;
+ } ;
+*/ 
+ #include <stdio.h>
+
+int main() {
+	long nc;
+	
+	nc = 0;
+	while (getchar() != EOF)
+		++nc;
+	printf("%ld\n", nc);
+	
+	return 0;
+}	
